@@ -255,10 +255,10 @@ if 'P' in Modules:
            \n    Module P - .sam to .clean.sorted.psl conversion\
            \n------------------------------------------------------\n')
 
-    input=False
-    if os.path.exists(sam_file) and os.path.getsize(sam_file)>0:
-        input=True
-
+#    input=False
+#    if os.path.exists(sam_file) and os.path.getsize(sam_file)>0:
+#        input=True
+    input=True
     if input:
         print('\tconverting sam output to psl format')
         os.system('python3 %s -i %s -o %s -m -t %s' % (emtrey, sam_file, psl_file,minimap2_threads))
